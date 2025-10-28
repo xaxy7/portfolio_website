@@ -1,7 +1,15 @@
 
 
 export const Home = () => {
-    return <div>
+    return <div className="min-h-screen">
+        {/*Theme Toggle*/}
 
+        {/*Background Effects*/}
+
+        {/*NavBar*/}
+
+        {/*MainContent*/}
+
+        {/*Footer*/}
     </div>
 }

@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {Home} from "lucide-react";
+import {Home} from "@/pages/Home.jsx";
+import {NotFound} from "@/pages/NotFound.jsx";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route index element={<Home />} />
-                <Route />
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     </>
