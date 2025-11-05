@@ -1,6 +1,6 @@
 import {ThemeToggle} from "@/components/ThemeToggle.jsx";
-// import {NavBar} from "@/components/NavBar.jsx";
-import {NavbarTest} from "@/components/NavBarTest.jsx";
+import {NavBar} from "@/components/NavBar.jsx";
+
 import {Background} from "@/components/Background.jsx";
 
 
@@ -11,8 +11,8 @@ export const Home = () => {
         {/*Background Effects*/}
         <Background/>
         {/*NavBar*/}
-        {/*<NavBar/>*/}
-        <NavbarTest/>
+        <NavBar/>
+
         {/*MainContent*/}
 
         {/*Footer*/}
