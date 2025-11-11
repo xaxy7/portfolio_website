@@ -176,48 +176,48 @@
   }
 
   .firefly {
-    --firefly-color: hsl(22, 50%, 65%); /* light mode default cyan */
-    --firefly-glow: rgba(255, 182, 193, 0.4); /* light mode pink glow */
-
     position: absolute;
     list-style: none;
     border-radius: 50%;
-    bottom: -150px;
+
+    /* Light mode colors */
+    --firefly-color: rgb(218, 89, 33);
+    --firefly-glow: rgba(255, 182, 193, 0.4);
 
     background: radial-gradient(circle closest-side, var(--firefly-color) 0%, var(--firefly-glow) 40%, rgba(0,0,0,0) 100%);
-    box-shadow: 0 0 10px 4px var(--firefly-glow);
+    box-shadow: 0 0 12px 5px var(--firefly-glow);
 
-    animation-name: firefly-move, firefly-flicker;
+    animation-name: firefly-swarm, firefly-flicker;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
-    animation-duration: 25s, 2s;
   }
 
   /* Dark mode override */
   .dark .firefly {
-    --firefly-color: rgba(255,255,150,1); /* bright yellow */
-    --firefly-glow: rgba(255,255,150,0.3);
+    --firefly-color: rgba(255, 255, 150, 1);
+    --firefly-glow: rgba(255, 255, 150, 0.3);
   }
 
-
-  /* Movement animation */
-  @keyframes firefly-move {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1000px) rotate(720deg);
-      opacity: 0;
-    }
+  /* Smooth infinite swarming */
+  @keyframes firefly-swarm {
+    0%   { transform: translate(var(--x0), var(--y0)); }
+    12.5%{ transform: translate(var(--x1), var(--y1)); }
+    25%  { transform: translate(var(--x2), var(--y2)); }
+    37.5%{ transform: translate(var(--x3), var(--y3)); }
+    50%  { transform: translate(var(--x4), var(--y4)); }
+    62.5%{ transform: translate(var(--x5), var(--y5)); }
+    75%  { transform: translate(var(--x6), var(--y6)); }
+    87.5%{ transform: translate(var(--x7), var(--y7)); }
+    100% { transform: translate(var(--x0), var(--y0)); } /* loops smoothly */
   }
 
-  /* Flicker animation */
+  /* Flicker effect */
   @keyframes firefly-flicker {
     0%, 100% { opacity: 1; }
-    25% { opacity: 0.6; }
-    50% { opacity: 0.8; }
-    75% { opacity: 0.7; }
+    20% { opacity: 0.7; }
+    40% { opacity: 0.9; }
+    60% { opacity: 0.6; }
+    80% { opacity: 0.8; }
   }
 
 }
