@@ -7,6 +7,7 @@ import {About} from "@/components/About.jsx"
 import {SkillsSection} from "@/components/SkillsSection.jsx";
 import {ProjectsSection} from "@/components/ProjectsSection.jsx";
 import {ContactSection} from "@/components/ContactSection.jsx";
+import {Footer} from "@/components/Footer.jsx";
 
 
 export const Home = () => {
@@ -27,5 +28,6 @@ export const Home = () => {
             <ContactSection/>
         </main>
         {/*Footer*/}
+        <Footer/>
     </div>
 }
