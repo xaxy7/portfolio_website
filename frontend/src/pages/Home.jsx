@@ -2,6 +2,10 @@ import {ThemeToggle} from "@/components/ThemeToggle.jsx";
 import {NavBar} from "@/components/NavBar.jsx";
 
 import {Background} from "@/components/Background.jsx";
+import {HeroSection} from "@/components/HeroSection.jsx";
+import {About} from "@/components/About.jsx"
+import {SkillsSection} from "@/components/SkillsSection.jsx";
+import {ProjectsSection} from "@/components/ProjectsSection.jsx";
 
 
 export const Home = () => {
@@ -14,7 +18,12 @@ export const Home = () => {
         <NavBar/>
 
         {/*MainContent*/}
-
+        <main>
+            <HeroSection/>
+            <About/>
+            <SkillsSection/>
+            <ProjectsSection/>
+        </main>
         {/*Footer*/}
     </div>
 }
