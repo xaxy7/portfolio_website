@@ -69,7 +69,7 @@
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary: 28 65% 65%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
@@ -81,7 +81,7 @@
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 22, 50%, 65%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
@@ -158,4 +158,49 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+@layer components {
+  .firefly-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background: rgb(21, 21, 36);
+  }
+
+  .fireflies {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .firefly {
+    position: absolute;
+    list-style: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    bottom: -150px;
+    background: radial-gradient(circle closest-side, rgba(217,255,0,1) 0%, rgba(217,255,0,0.2) 40%, rgba(217,255,0,0) 100%);
+    animation: firefly-move 25s linear infinite;
+  }
+
+  .firefly:nth-child(1) { left: 25%; width: 50px; height: 200px; animation-delay: 0s; }
+  .firefly:nth-child(2) { left: 10%; width: 250px; height: 250px; animation-delay: 2s; animation-duration: 12s; }
+  .firefly:nth-child(3) { left: 70%; width: 290px; height: 290px; animation-delay: 4s; }
+  .firefly:nth-child(4) { left: 40%; width: 260px; height: 260px; animation-delay: 0s; animation-duration: 18s; }
+  .firefly:nth-child(5) { left: 65%; width: 190px; height: 190px; animation-delay: 0s; }
+  .firefly:nth-child(6) { left: 75%; width: 330px; height: 330px; animation-delay: 3s; }
+  .firefly:nth-child(7) { left: 35%; width: 340px; height: 340px; animation-delay: 7s; }
+  .firefly:nth-child(8) { left: 50%; width: 250px; height: 250px; animation-delay: 15s; animation-duration: 45s; }
+  .firefly:nth-child(9) { left: 20%; width: 150px; height: 150px; animation-delay: 2s; animation-duration: 35s; }
+  .firefly:nth-child(10) { left: 85%; width: 360px; height: 360px; animation-delay: 0s; animation-duration: 11s; }
+
+  @keyframes firefly-move {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+  }
 }

@@ -1,13 +1,9 @@
 
-
-
-export const Background = () => {
-    console.log("Background mounted!");
+export const FireflyBackground = () => {
     return (
-
         <div className="firefly-bg">
             <ul className="fireflies">
-                {[...Array(10)].map((_, i) => (
+                {Array.from({ length: 10 }).map((_, i) => (
                     <li key={i} className="firefly"></li>
                 ))}
             </ul>
