@@ -18,7 +18,7 @@ export const Home = () => {
         <NavBar/>
 
         {/*MainContent*/}
-        <main>
+        <main >
             <HeroSection/>
             <About/>
             <SkillsSection/>
