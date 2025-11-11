@@ -164,11 +164,9 @@
   .firefly-bg {
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
     pointer-events: none;
     z-index: 0;
-    background: rgb(21, 21, 36);
+
   }
 
   .fireflies {
@@ -178,29 +176,48 @@
   }
 
   .firefly {
+    --firefly-color: hsl(22, 50%, 65%); /* light mode default cyan */
+    --firefly-glow: rgba(255, 182, 193, 0.4); /* light mode pink glow */
+
     position: absolute;
     list-style: none;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
     bottom: -150px;
-    background: radial-gradient(circle closest-side, rgba(217,255,0,1) 0%, rgba(217,255,0,0.2) 40%, rgba(217,255,0,0) 100%);
-    animation: firefly-move 25s linear infinite;
+
+    background: radial-gradient(circle closest-side, var(--firefly-color) 0%, var(--firefly-glow) 40%, rgba(0,0,0,0) 100%);
+    box-shadow: 0 0 10px 4px var(--firefly-glow);
+
+    animation-name: firefly-move, firefly-flicker;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 25s, 2s;
   }
 
-  .firefly:nth-child(1) { left: 25%; width: 50px; height: 200px; animation-delay: 0s; }
-  .firefly:nth-child(2) { left: 10%; width: 250px; height: 250px; animation-delay: 2s; animation-duration: 12s; }
-  .firefly:nth-child(3) { left: 70%; width: 290px; height: 290px; animation-delay: 4s; }
-  .firefly:nth-child(4) { left: 40%; width: 260px; height: 260px; animation-delay: 0s; animation-duration: 18s; }
-  .firefly:nth-child(5) { left: 65%; width: 190px; height: 190px; animation-delay: 0s; }
-  .firefly:nth-child(6) { left: 75%; width: 330px; height: 330px; animation-delay: 3s; }
-  .firefly:nth-child(7) { left: 35%; width: 340px; height: 340px; animation-delay: 7s; }
-  .firefly:nth-child(8) { left: 50%; width: 250px; height: 250px; animation-delay: 15s; animation-duration: 45s; }
-  .firefly:nth-child(9) { left: 20%; width: 150px; height: 150px; animation-delay: 2s; animation-duration: 35s; }
-  .firefly:nth-child(10) { left: 85%; width: 360px; height: 360px; animation-delay: 0s; animation-duration: 11s; }
+  /* Dark mode override */
+  .dark .firefly {
+    --firefly-color: rgba(255,255,150,1); /* bright yellow */
+    --firefly-glow: rgba(255,255,150,0.3);
+  }
 
+
+  /* Movement animation */
   @keyframes firefly-move {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+    }
   }
+
+  /* Flicker animation */
+  @keyframes firefly-flicker {
+    0%, 100% { opacity: 1; }
+    25% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    75% { opacity: 0.7; }
+  }
+
 }
