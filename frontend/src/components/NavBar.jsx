@@ -29,11 +29,11 @@ export const NavBar = () =>{
          isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs " : "py-5"
     )}>
         <div className="container flex items-center justify-between">
-            <a  className="text-xl font-bold text-primary flex items-center" href="#hero">
+            <a  className="text-2xl font-bold text-foreground flex items-center" href="#hero">
                 <span  className="relative z-10">
-                    <span className="text-glow text-foreground">
-                        Ksawery Kochanowicz
-                    </span> {""} Portfolio
+                    <span className="text-glow text-primary">
+                        K
+                    </span>K
                 </span>
             </a>
             {/*desktop */}
