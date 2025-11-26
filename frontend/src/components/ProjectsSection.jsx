@@ -41,8 +41,8 @@ const projects = [
         The map functionality—covering data handling, state updates, and user interaction—was primarily overseen and implemented by me,
         forming a central technical element of the application.</>),
         image: "",
-        // images: ["/projects/Map_Website_1.png", "/projects/Map_Website_2.png", "/projects/Map_Website_3.png"],
-        images: ["/projects/PeckOFRage_1.png", "/projects/PeckOFRage_2.png", "/projects/PeckOFRage_3.png"],
+        images: ["/projects/Map_Website_1.png", "/projects/Map_Website_2.png", "/projects/Map_Website_3.png"],
+        // images: ["/projects/PeckOFRage_1.png", "/projects/PeckOFRage_2.png", "/projects/PeckOFRage_3.png"],
         tags: ["JavaScript", "Node.js", "Express", "HTML/CSS", "Git"],
         demoUrl: "#",
         githubUrl: "",
@@ -76,12 +76,12 @@ export const ProjectsSection = () => {
         </div>
 
         <p className= "text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Here are some of my projects from the past year. Each of them shows my different capablities
+            Here are some of my projects from the past year. Each of them shows my different capabilities
         </p>
 
-        <div className="grid grid-cols-1 gap-16 lg:px-25 md:px-10 sm:px-4">
+        <div className="grid grid-cols-1 gap-16 lg:px-25 md:px-10 sm:px-4 ">
             {projects.map((project,key) => (
-                <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover grid grid-cols-2">
+                <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover grid md:grid-cols-2 sm:grid-cols-1">
                         {key % 2 === 0 ? (
                             <>
                                 <div className="h-full  overflow-hidden">
