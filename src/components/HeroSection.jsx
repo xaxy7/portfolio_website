@@ -15,7 +15,7 @@ export const HeroSection = () =>{
                     </h1>
                     <div className="flex flex-col ">
                         <p className="text-lg md:text-xl text-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-right">
-                            Second-year <span className="text-primary "> Creative Computing </span> student with a focus on full‑stack web development using modern <span className="text-primary "> JavaScript </span> technologies. Enjoys turning ideas into functional, user-friendly web experiences while steadily building real-world skills through coursework and personal projects.
+                            Second-year <span className="text-primary "> Creative Computing </span> student with a focus on<span className="text-primary "> Machine Learing, Game Design and Full-Stack development</span>
                         </p>
                         <div className="opacity-0 pt-4 animate-fade-in-delay-4 text-right">
                             <Link to="/projects" className="cosmic-button">

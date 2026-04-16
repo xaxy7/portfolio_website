@@ -72,7 +72,29 @@ export const projects = [
         tags: ["JavaScript", "React", "Node.js", "Express", "HTML/CSS", "Git"],
         demoUrl: "https://cc241042-10679.node.fhstp.cc",
         githubUrl: "https://github.com/xaxy7/SideQuest",
-    },    
+    },
+    {
+        id: 6,
+        title: "Just Breathe",
+        description: (
+            <>
+                <span className="font-bold text-primary">Just Breathe </span> is a 2d adventure/puzzle game developed in just 48 hours for the Global Game Jam 26, in a team of 4, created Using C# and Godot Engine.
+            </>
+        ),
+        image: withBaseUrl("projects/gameplay_1.png"),
+        images: [
+            withBaseUrl("projects/gameplay_1.png"),
+            withBaseUrl("projects/gameplay_2_0.png"),
+            withBaseUrl("projects/gameplay_3_0.png"),
+            withBaseUrl("projects/gameplay_4_0.png"),
+            withBaseUrl("projects/gameplay_5_0.png"),
+
+
+        ],
+        tags: ["Godot", "C#", "Git"],
+        demoUrl: "https://arduino-slot-machine.com",
+        githubUrl: "https://github.com/xaxy7/ArduinoSlotMachine",       
+    }, 
     {
         id: 4,
         title: "Arduino Slot Machine",

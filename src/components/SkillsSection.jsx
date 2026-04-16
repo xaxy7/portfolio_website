@@ -1,9 +1,10 @@
 import {useState} from "react";
 import {cn} from "@/lib/utils.js";
 import {DiHtml5, DiMysql, DiNodejsSmall, DiPython, DiReact} from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
 import {HiCodeBracket} from "react-icons/hi2";
 import {TbBrandCpp} from "react-icons/tb";
-import {SiKotlin} from "react-icons/si";
+import {SiGodotengine, SiKotlin, SiUnity} from "react-icons/si";
 import {IoLogoJavascript} from "react-icons/io";
 import {FaFigma, FaGitAlt} from "react-icons/fa";
 import {IconContext} from "react-icons";
@@ -25,10 +26,14 @@ const skills = [
     {name: "C++", level: 60, category: "languages", icon:<TbBrandCpp />},
     {name: "Kotlin", level: 60, category: "languages", icon: <SiKotlin /> },
     {name: "JavaScript", level: 60, category: "languages", icon: <IoLogoJavascript />},
+    {name: "C-sharp", level: 60, category: "languages", icon: <TbBrandCSharp />},
 
     //Tools
     {name: "Figma", level: 60, category: "tools", icon: <FaFigma />},
-    {name: "Git", level: 60, category: "tools", icon: <FaGitAlt />}
+    {name: "Git", level: 60, category: "tools", icon: <FaGitAlt />},
+    {name: "Godot", level: 60, category: "tools", icon: <SiGodotengine />},
+    {name: "Unity", level: 60, category: "tools", icon: <SiUnity/>}
+
 ]
 
 const categories = ["all", "frontend", "backend", "tools", "languages"]
