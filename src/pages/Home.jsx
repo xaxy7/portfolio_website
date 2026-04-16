@@ -25,7 +25,7 @@ export const Home = () => {
             <HeroSection/>
             {/*<About/>*/}
             <SkillsSection/>
-            <ProjectsSection/>
+            <ProjectsSection limit={3}/>
             <ContactSection/>
         </main>
         {/*Footer*/}

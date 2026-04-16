@@ -1,4 +1,5 @@
 import {ArrowDown} from "lucide-react";
+import {Link} from "react-router-dom";
 
 
 export const HeroSection = () =>{
@@ -17,9 +18,9 @@ export const HeroSection = () =>{
                             Second-year <span className="text-primary "> Creative Computing </span> student with a focus on full‑stack web development using modern <span className="text-primary "> JavaScript </span> technologies. Enjoys turning ideas into functional, user-friendly web experiences while steadily building real-world skills through coursework and personal projects.
                         </p>
                         <div className="opacity-0 pt-4 animate-fade-in-delay-4 text-right">
-                            <a href="#projects" className="cosmic-button">
+                            <Link to="/projects" className="cosmic-button">
                                 View My Work
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
