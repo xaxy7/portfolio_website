@@ -92,8 +92,8 @@ export const projects = [
 
         ],
         tags: ["Godot", "C#", "Git"],
-        demoUrl: "https://arduino-slot-machine.com",
-        githubUrl: "https://github.com/xaxy7/ArduinoSlotMachine",       
+        demoUrl: "https://globalgamejam.org/games/2026/just-breath-1",
+        githubUrl: "https://github.com/einfrog/GGJ2026-Just-Breathe",       
     }, 
     {
         id: 4,
@@ -110,8 +110,8 @@ export const projects = [
 
         ],
         tags: ["Arduino", "C", "Git"],
-        demoUrl: "https://arduino-slot-machine.com",
-        githubUrl: "https://github.com/xaxy7/ArduinoSlotMachine",
+        demoUrl: "https://github.com/einfrog/tui_arduino_slot_machine",
+        githubUrl: "https://github.com/einfrog/tui_arduino_slot_machine",
     },
 
     {
